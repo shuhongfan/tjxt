@@ -1,0 +1,45 @@
+.ourderTime {
+  text-align: right;
+  padding: 12px 10px 0;
+  position: relative;
+  :deep(.el-input) {
+    width: 210px;
+    .el-range-editor {
+      &.el-input__wrapper {
+        border: 0 none !important;
+        padding-left: 5px;
+      }
+      .el-range-separator {
+        width: 2px;
+        overflow: hidden;
+        flex: initial;
+      }
+      .el-range__icon{
+          right: initial;
+          left: -6px;
+      }
+    }
+
+    .el-range-editor.el-input__wrapper.is-active {
+      border: 0 none;
+    }
+    .el-range__close-icon{
+        display: none;
+    }
+    .down{
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: url(@/assets/icon-buttom.png) no-repeat;
+        background-size: contain;
+        position: absolute;
+        right: 5px;
+        top: 10px;
+        z-index: 1;
+
+    }
+  }
+}
+.orderBox {
+  padding-top: 18px;
+}

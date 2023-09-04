@@ -1,0 +1,76 @@
+.mySetWrapper{
+    padding-right: 120px !important;
+    .avatar-uploader .el-upload {
+            border-radius: 6px;
+        cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .avatar-uploader .el-upload:hover {
+            border-color: #409EFF;
+        }
+        .avatar-uploader-icon {
+            font-size: 28px;
+            color: #8c939d;
+            background: #DFE0E3 url(@/assets/icon_touxiang.png) center center no-repeat;
+            background-size: 90px 90px;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            border-radius: 100px;
+            text-align: center;
+        }
+        .uploadBut{
+            background: #E1E6F0;
+            color: var(--color-font1);
+            width: 114px;
+            line-height: 40px;
+            border-radius: 20px;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 20px;
+            &:hover{
+                color: var(--color-font1);
+                background-color: var(--color-background6);
+            }
+            &:active{
+                color: var(--color-font1);
+                background-color: var(--color-background6);
+            }
+        }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            display: block;
+        }
+        .el-upload{
+            flex-direction: column; 
+        }
+        .item{
+        margin-right: 70px;
+        margin-bottom: 40px;
+        .lab{
+            display: inline-block;
+            width: 80px;
+            line-height: 40px;
+        }
+        .radioGroup{
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .bt{
+            width: 146px;
+            height: 40px;
+            border-radius: 2px;
+        }
+        }
+        .set{
+        font-size: 14px;
+        .line{
+            line-height: 69px;
+            border-bottom: 1px solid #EEEEEE;
+        }
+    }
+      
+}

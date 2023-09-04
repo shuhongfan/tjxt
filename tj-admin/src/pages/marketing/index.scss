@@ -1,0 +1,69 @@
+:deep(.redeemDialog) {
+  .el-dialog {
+    width: 946px !important;
+    .el-dialog__body {
+      padding: 20px 30px 4px;
+    }
+  }
+  .redeemBox ul {
+    margin: 20px 0 4px;
+    // border: 1px solid var(--color-tabborder);
+    border-right: 0 none;
+    border-bottom: 0 none;
+    // display: flex;
+    // flex-wrap: wrap;
+    li {
+      width: 25%;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      display: inline-block;
+      // border-right: 1px solid var(--color-tabborder);
+      border: 1px solid var(--color-tabborder);
+      margin: -1px 0 0 -1px;
+      //   奇数行设置背景色
+      &:nth-child(odd) {
+        background: var(--color-tabbackground);
+      }
+    }
+  }
+}
+:deep(.markDialog) {
+  .el-form-item__content {
+    display: block;
+    .startTime {
+      width: 433px;
+      .el-date-editor.el-input {
+        width: 100%;
+      }
+    }
+
+    .timeBox {
+      display: flex;
+      .el-input {
+        width: 200px;
+      }
+    }
+  }
+  .line {
+    padding: 0 15px;
+  }
+  .el-dialog {
+    width: 700px;
+    .el-dialog__body {
+      padding: 30px 68px 14px;
+      .timeRight {
+        .el-input {
+          width: 433px !important;
+        }
+        .text {
+          top: -10px;
+          right: 12px;
+        }
+      }
+    }
+    .inputRight {
+      margin-right: 0;
+    }
+  }
+}

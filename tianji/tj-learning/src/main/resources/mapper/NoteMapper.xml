@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tianji.learning.mapper.NoteMapper">
+
+    <select id="queryNotePageBySectionId" resultType="com.tianji.learning.domain.po.Note">
+        SELECT n.id, n.user_id, n.course_id, n.chapter_id, n.section_id, n.note_moment, n.content,
+        n.is_private, n.hidden, n.hidden_reason,n.author_id, n.create_time, n.update_time, n2.is_gathered
+        FROM note n
+            LEFT JOIN note n2 ON n2.gathered_note_id = n.id
+        WHERE
+        n.hidden = 0 AND n.is_gathered = 0
+        <if test="sectionId != null">
+            AND n.section_id = #{sectionId}
+        </if>
+        <if test="courseId != null">
+            AND n.course_id = #{courseId}
+        </if>
+        AND (n.is_private = 0 OR n.user_id = #{userId})
+        ORDER BY n.note_moment
+    </select>
+    <select id="queryNotePage" resultType="com.tianji.learning.domain.po.Note">
+        SELECT n.id,
+               n.user_id,
+               n.course_id,
+               n.chapter_id,
+               n.section_id,
+               n.note_moment,
+               n.content,
+               n.is_private,
+               n.hidden,
+               n.hidden_reason,
+               n.create_time,
+               n.update_time,
+               (SELECT count(u.id) FROM note u WHERE u.gathered_note_id = n.id) AS usedTimes
+        FROM note n
+            ${ew.customSqlSegment}
+    </select>
+</mapper>

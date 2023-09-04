@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tianji.trade.mapper.RefundApplyMapper">
+
+    <select id="queryByDetailId" resultType="com.tianji.trade.domain.po.RefundApply">
+        SELECT id, order_detail_id, order_id, refund_order_no, user_id, refund_amount, status, refund_reason, message,
+               approver, approve_opinion, remark, failed_reason, refund_channel, create_time, approve_time,
+               finish_time, update_time, creater, updater
+        FROM refund_apply
+        WHERE order_detail_id = #{detailId}
+        ORDER BY id DESC
+    </select>
+</mapper>

@@ -1,0 +1,52 @@
+// 个人中心相关页面样式导入
+@import './style/myClass.scss';
+@import './style/myExam.scss';
+@import './style/myOrder.scss';
+@import './style/myCoupon.scss';
+@import './style/myInterral.scss';
+@import './style/mySet.scss';
+// 个人中心架构页面 样式
+.personalWrapper{
+    .personal{
+        padding: 30px 0 ;
+        display: flex;
+        justify-content: space-between;
+    }
+    .content{
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 8px;
+    }
+}
+// 个人中心-公用样式
+.personalCards{
+    background-color: #fff;
+    padding: 20px 30px 30px;
+    margin-bottom: 20px; 
+    border-radius: 8px;
+}
+.pageination{
+    padding-top: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.nodata{
+    width: 100%;
+    height: calc(100vh - 450px);
+    text-align: center;
+    line-height: 100px;
+    color:var(--color-font2)
+}
+.dialog-footer{
+    display: flex;
+    justify-content: flex-end;
+    .bt{
+        width: 80px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 14px;
+        margin-left: 20px;
+        border-radius: 4px;
+    }
+}

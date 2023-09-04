@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="70px" viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/Fill/Check-Circle-Fill@2x</title>
+    <g id="页面1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="新建教师成功页面" transform="translate(-644.000000, -253.000000)">
+            <g id="Feedback/Result/Light/Icon-Success" transform="translate(399.000000, 248.000000)">
+                <g id="Icon/Fill/Check-Circle-Fill" transform="translate(240.000000, 0.000000)">
+                    <rect id="矩形" fill="#000000" fill-rule="nonzero" opacity="0" x="0" y="0" width="80" height="80"></rect>
+                    <path d="M40,5 C20.671875,5 5,20.671875 5,40 C5,59.328125 20.671875,75 40,75 C59.328125,75 75,59.328125 75,40 C75,20.671875 59.328125,5 40,5 Z M55.1171875,28.5703125 L38.6640625,51.3828125 C37.671875,52.765625 35.6171875,52.765625 34.625,51.3828125 L24.8828125,37.8828125 C24.5859375,37.46875 24.8828125,36.890625 25.390625,36.890625 L29.0546875,36.890625 C29.8515625,36.890625 30.609375,37.2734375 31.078125,37.9296875 L36.640625,45.6484375 L48.921875,28.6171875 C49.390625,27.96875 50.140625,27.578125 50.9453125,27.578125 L54.609375,27.578125 C55.1171875,27.578125 55.4140625,28.15625 55.1171875,28.5703125 Z" id="形状" fill="#52C41A"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

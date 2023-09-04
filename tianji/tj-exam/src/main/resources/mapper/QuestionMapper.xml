@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tianji.exam.mapper.QuestionMapper">
+
+    <select id="countQuestionOfCreater" resultType="com.tianji.api.dto.IdAndNumDTO">
+        SELECT `creater` AS id, COUNT(1) AS num
+        FROM question
+        WHERE `creater`
+        <foreach collection="createrIds" open="IN (" close=")" item="id" separator=",">
+            #{id}
+        </foreach>
+        GROUP BY `creater`
+    </select>
+</mapper>

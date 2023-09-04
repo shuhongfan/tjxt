@@ -1,0 +1,104 @@
+
+// 我的考试 - 列表
+.myExamWrapper{
+    .el-table, .el-table thead{
+        color: var(--color-font1);
+    }
+}
+// 我的考试 - 详情
+.myExamDetails{
+    background-color: #fff;
+    padding: 30px;
+    .examHeadle{
+        .tit{
+            font-weight: 600;
+            font-size: 20px; 
+            margin-bottom: 20px;
+        }
+        .table{
+            border-top: 1px solid #EEEEEE;
+            border-left: 1px solid #EEEEEE;
+            .td{
+                font-size: 14px;
+                padding:20px;
+                border-right: 1px solid #EEEEEE;
+                border-bottom: 1px solid #EEEEEE;
+            }
+        }
+    }
+    .answerCardTitle{
+        font-weight: 600;
+        font-size: 16px;
+        margin: 30px 0 20px 0;
+    }
+    .answerCards{
+        margin-bottom: 30px;
+        span{
+            display: inline-block;
+            width: 22px;
+            line-height: 22px;
+            text-align: center;
+            color: #fff;
+            font-size: 14px;
+            background: #A0A9B2;
+            border-radius: 2px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .right{
+            background: #26BA9B;
+        }
+        .wrong{
+            background: #FF4C4C;
+        }
+    }
+    .examCont{
+        .item{
+            margin-bottom: 47px;
+        }
+        .examTitle{
+            display: flex;
+            line-height: '32';
+            margin:20px 0 10px 0;
+            img{
+                width: 32px;
+                height: 32px;
+                margin-right: 25px;
+            }
+            .quest{
+                line-height: 32px;
+                font-size: 22px;
+                
+            }
+        }
+        .answer{
+            line-height: 34px;
+            padding-left: 80px;
+            margin-bottom: 10px;
+            li{
+                list-style-type:upper-alpha;
+                span{
+                    p,  div, li {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        .analysis{
+            margin-left: 60px;
+            font-size: 14px;
+            border-radius: 4px;
+            background: #F5F6F9;
+            padding: 20px 20px 30px 20px;
+            .col{
+                margin-right: 40px;
+            }
+            .rt{
+                color: #26BA9B;
+            }
+            .fx:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}

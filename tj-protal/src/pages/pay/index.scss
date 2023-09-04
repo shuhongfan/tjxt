@@ -1,0 +1,243 @@
+// 结算页面
+.settlementWrapper, .paymenttWrapper, .successWrapper, .cartsWrapper {
+  padding: 30px;
+  margin: 30px auto 40px auto;
+  border-radius: 8px;
+  .title{
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 28px;
+    span{
+      font-weight: 400;
+      font-size: 14px;
+      color: #80878C;
+      margin-left: 5px;
+    }
+  }
+  .tabHead{
+    border: 1px solid #EEEEEE;
+    padding: 17px 30px 18px 30px;
+    font-weight: 500;
+  }
+  .tabItem{
+    padding: 16px 30px 16px 30px;
+    border: 1px solid #EEEEEE;
+    border-top: none;
+    line-height: 68px;
+    font-weight: 500;
+    img{
+      width: 120px;
+      height: 68px;
+      border-radius: 4px;
+      margin-right: 20px;
+    }
+  }
+  .cal{
+    width: 300px;
+    text-align: center;
+  }
+  .settiementInfo{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 30px;
+    border: 1px solid #EEEEEE;
+    
+    .coupon{
+      align-items: flex-end;
+      margin-bottom: 20px;
+    }
+    .price{
+      font-size: 14px;
+      line-height: 40px;
+      margin-left: 65px;
+    }
+    .paid{
+      margin-bottom: 40px;
+      font-size: 20px;
+    }
+    .bt{
+      width: 144px;
+      height: 50px;
+      line-height: 50px;
+      background: #FF4C4C;
+      border-radius: 25px;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+  }
+  .noData{
+    position: relative;
+    bottom: 10px;
+  }
+}
+
+// 支付页面
+.paymenttWrapper{
+  .successCont{
+    border: 1px solid #EEEEEE;
+    padding: 50px;
+    align-items: center;
+    img{
+      margin-right: 20px;
+    }
+    .tit{
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 44px;
+    }
+  }
+  .pay{
+    .tit{
+      font-weight: 600;
+      font-size: 14px;
+      margin: 40px 0 30px 0;
+    }
+    .cont{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 44px;
+      border: 1px solid #EEEEEE;
+      width: 200px;
+      height: 70px;
+      font-weight: 600;
+      font-size: 18px;
+      cursor: pointer;
+      img{
+        margin-right: 15px;
+      }
+    }
+    .act{
+      border: 1px solid var(--color-main);
+    }
+  }
+  .dialogTitle{
+    background-color: #ccc;
+  }
+  .dialog-footer{
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 26px;
+    em{
+      font-style: normal;
+      color: #FF4C4C;
+    }
+  }
+  .el-dialog__header{
+    text-align: center;
+  }
+}
+// 支付成功
+.successWrapper{
+  display: flex;
+  justify-content: center;
+  .successCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .tit{
+      font-weight: 600;
+      font-size: 24px;
+      margin: 30px 0 10px 0;
+    }
+    .order{
+      font-size: 14px;
+      color: #80878C;
+    }
+    .bt{
+      width: 122px;
+      height: 36px;
+      line-height: 36px;
+      background: #2080F7;
+      border-radius: 4px;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+  }
+}
+
+// 购物车
+.cartsWrapper{
+  .container{
+    padding: 30px;
+    border-radius: 8px;
+    align-items: center;
+  }
+  .empty{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #80878C;
+    font-size: 14px;
+    height: calc(100vh - 515px);
+    .desc{
+      margin-bottom: 23px;
+    }
+    .bt{
+      width: 122px;
+      height: 36px;
+      line-height: 36px;
+    }
+  }
+  .cal{
+    width: 200px;
+  }
+  .tabItem{
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .allAction{
+    line-height: 40px;
+  }
+  .bt-grey1{ 
+    width: 110px;
+  }
+  .bt{
+    height: fit-content;
+    font-size: 14px;
+  }
+  .bt-red{
+    border-radius: 50px;
+    height: 50px;
+    line-height: 50px;
+    width: 140px;
+    margin-left: 32px;
+  }
+  .checkBox{
+    flex:1;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: center;
+    .name{
+      margin-left: 140px;
+      line-height: 25px;
+    }
+    img{
+      margin-left: 30px;
+    }
+  }
+  .count{
+    justify-content: right;
+    text-align: right;
+    color: var(--color-font1);
+    line-height: 27px;
+    .pric{
+      font-weight: 600;
+      font-size: 20px;
+      color: #FF4C4C;
+    }
+  }
+}
+.cart-price{
+  width: 250px;
+  line-height: 24px;
+}
+.cart-price-div{
+  line-height: 24px;
+}

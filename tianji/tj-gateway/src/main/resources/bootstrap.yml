@@ -1,0 +1,101 @@
+server:
+  port: 10010  #端口
+  tomcat:
+    uri-encoding: UTF-8   #服务编码
+spring:
+  profiles:
+    active: dev
+  application:
+    name: gateway-service
+  cloud:
+    nacos:
+      config:
+        file-extension: yaml
+        shared-configs: # 共享配置
+          - data-id: shared-spring.yaml # 共享spring配置
+            refresh: false
+          - data-id: shared-redis.yaml # 共享redis配置
+            refresh: false
+          - data-id: shared-logs.yaml # 共享日志配置
+            refresh: false
+    gateway:
+      routes:
+        - id: ms
+          uri: lb://media-service
+          predicates:
+            - Path=/ms/**
+        - id: as
+          uri: lb://auth-service
+          predicates:
+            - Path=/as/**
+          filters:
+            - PreserveHostHeader
+        - id: ds
+          uri: lb://data-service
+          predicates:
+            - Path=/ds/**
+        - id: sms
+          uri: lb://message-service
+          predicates:
+            - Path=/sms/**
+        - id: us
+          uri: lb://user-service
+          predicates:
+            - Path=/us/**
+        - id: cs
+          uri: lb://course-service
+          predicates:
+            - Path=/cs/**
+        - id: os
+          uri: lb://order-service
+          predicates:
+            - Path=/os/**
+        - id: ss
+          uri: lb://search-service
+          predicates:
+            - Path=/ss/**
+        - id: ls
+          uri: lb://learning-service
+          predicates:
+            - Path=/ls/**
+        - id: ps
+          uri: lb://pay-service
+          predicates:
+            - Path=/ps/**
+        - id: ts
+          uri: lb://trade-service
+          predicates:
+            - Path=/ts/**
+        - id: es
+          uri: lb://exam-service
+          predicates:
+            - Path=/es/**
+        - id: rs
+          uri: lb://remark-service
+          predicates:
+            - Path=/rs/**
+        - id: prs
+          uri: lb://promotion-service
+          predicates:
+            - Path=/prs/**
+      default-filters:
+        - StripPrefix=1
+      globalcors: # 全局的跨域处理
+        add-to-simple-url-handler-mapping: true # 解决options请求被拦截问题
+        corsConfigurations:
+          '[/**]':
+            allowedOriginPatterns: # 允许哪些网站的跨域请求
+              - "*"
+            allowedMethods: # 允许的跨域ajax的请求方式
+              - "GET"
+              - "POST"
+              - "DELETE"
+              - "PUT"
+              - "OPTIONS"
+            allowedHeaders: "*" # 允许在请求中携带的头信息
+            allowCredentials: true # 是否允许携带cookie
+            maxAge: 360000 # 这次跨域检测的有效期
+
+logging:
+  level:
+    com.tianji: debug

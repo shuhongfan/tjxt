@@ -1,0 +1,17 @@
+1.虚拟机导入文档、每一天的Markdown笔记文档全部采用在线模式，地址为：
+https://b11et3un53m.feishu.cn/wiki/space/7210409107579469825?ccm_open_type=lark_wiki_spaceLink
+
+对于文档有疑问或错误可以通过评论提交，修复后会删除评论
+
+
+2.产品原型地址：
+天机学堂-管理后台：https://lanhuapp.com/link/#/invite?sid=qx03viNU   密码: Ssml
+天机学堂-用户端：https://lanhuapp.com/link/#/invite?sid=qx0Fy3fa  密码: ZsP3
+
+3.代码地址
+按照课堂要求配置好以后，可以通过git.tianji.com访问，进入gogs控制台。
+使用tjxt/123321即可登录。
+然后就可以看到即可代码仓库：
+服务端代码仓库：tjxt
+用户端前端代码：tj-protal
+管理端前端代码：tj-admin

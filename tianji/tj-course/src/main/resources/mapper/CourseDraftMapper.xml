@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tianji.course.mapper.CourseDraftMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.tianji.course.domain.po.CourseDraft">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="course_type" property="courseType" />
+        <result column="cover_url" property="coverUrl" />
+        <result column="first_cate_id" property="firstCateId" />
+        <result column="second_cate_id" property="secondCateId" />
+        <result column="third_cate_id" property="thirdCateId" />
+        <result column="free" property="free" />
+        <result column="price" property="price" />
+        <result column="template_type" property="templateType" />
+        <result column="template_url" property="templateUrl" />
+        <result column="status" property="status" />
+        <result column="purchase_start_time" property="purchaseStartTime" />
+        <result column="purchase_end_time" property="purchaseEndTime" />
+        <result column="step" property="step" />
+        <result column="score" property="score" />
+        <result column="media_duration" property="mediaDuration" />
+        <result column="valid_duration" property="validDuration" />
+        <result column="section_num" property="sectionNum" />
+        <result column="can_update" property="canUpdate" />
+        <result column="dep_id" property="depId" />
+        <result column="publish_time" property="publishTime" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="creater" property="creater" />
+        <result column="updater" property="updater" />
+        <result column="can_update" property="canUpdate"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, course_type, cover_url, first_cate_id, second_cate_id, third_cate_id, free, price, template_type, template_url, status, purchase_start_time, purchase_end_time, step, score, media_duration, valid_duration, section_num, can_update, dep_id, publish_time, create_time, update_time, creater, updater,c_version
+    </sql>
+
+</mapper>

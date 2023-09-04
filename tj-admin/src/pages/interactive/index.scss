@@ -1,0 +1,110 @@
+:deep(.questionBox),:deep(.repliesBox) {
+  padding: 20px 0px;
+  .head {
+    color: var(--color-font1);
+    line-height: 20px;
+    padding: 0 30px;
+    img {
+      width: 24px;
+      height: 24px;
+      border-radius: 12px;
+      margin-right: 5px;
+    }
+  }
+  .con {
+    padding: 3px 50px 0 58px;
+  }
+  .title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-font1);
+    display: flex;
+    align-items: center;
+    .info {
+      flex: 1;
+      .time{
+        font-size: 14px;
+        font-weight: normal;
+        padding: 0;
+      }
+    }
+    .btn {
+      padding: 0;
+      .button {
+        padding: 0 17px;
+        min-width: 90px;
+      }
+    }
+  }
+  .time {
+    padding: 8px 0 0;
+    color: var(--color-font9);
+  }
+  .description {
+    line-height: 24px;
+    padding-top: 24px;
+  }
+  .food,.repliesFood {
+    border-top: 1px solid var(--color-tabborder);
+    margin-top: 20px;
+    padding:20px 50px 3px 58px;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      li {
+        display: flex;
+        width: 33%;
+        color: var(--color-font5);
+        line-height: 20px;
+        padding: 4px 0;
+      }
+    }
+  }
+  .repliesFood{
+    display: flex;
+    .text{
+      color: var(--color-font5);
+      line-height: 20px;
+    }
+    
+    .praise{
+      padding-right: 33px;
+    }
+  }
+}
+:deep(.repliesBox){
+  .con{
+    padding-top: 23px;
+    
+  }
+  .head{
+    display: flex;
+    position: relative;
+    .info{
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+    .btn{
+      position: absolute;
+      top: 2px;
+      right:50px ;
+      padding-top: 0;
+      .el-button{
+        padding: 0 17px;
+        width: 90px;
+      }
+    }
+  }
+  .title{
+    display: inline-block;
+  }
+  .time{
+    padding: 5px 50px 0 58px;
+    // margin-top: -12px;
+  }
+  .description {
+    padding-top: 0;
+  }
+}

@@ -1,0 +1,44 @@
+// 我的课程样式
+.myClassWrapper{
+   .personalCards {
+    em{
+      font-style: normal;
+      color: var(--color-main);
+     }
+     .item{
+      border-bottom: solid 2px #eeeeee;
+      padding-bottom: 20px;
+     }
+     .item:last-child{
+      border: none;  
+    }
+   }
+    .dialogCont{
+        line-height: 40px;
+        padding: 0 10px;
+        span{
+          display: inline-block;
+          min-width: 100px;
+        }
+        .lastTime{
+          border:solid 1px #D9D9D9;
+          width: 100%;
+          padding: 0 10px;
+          border-radius: 4px;
+        }
+      }
+      .dialogFooter{
+        display: flex;
+        justify-content: flex-end;
+        div{
+          width: 80px;
+          height: 36px;
+          .bt{
+            font-size: 14px;
+            line-height: 36px;
+            border-radius: 4px;
+          }
+          margin-left: 20px;
+        }
+      }
+}

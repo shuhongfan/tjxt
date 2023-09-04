@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tianji.user.mapper.UserDetailMapper">
+
+    <select id="queryById" resultType="com.tianji.user.domain.po.UserDetail">
+        SELECT u.cell_phone, u.status, u.create_time, u.update_time, u.creater, u.updater,
+               u.id, u.username, ud.type, ud.name, ud.gender, ud.icon, ud.email, ud.qq, ud.birthday,
+               ud.job, ud.province, ud.city, ud.district, ud.intro, ud.photo, ud.role_id
+        FROM `user` u
+                 LEFT JOIN user_detail ud ON u.id = ud.id
+        WHERE u.id = #{userId}
+    </select>
+    <select id="queryByIds" resultType="com.tianji.user.domain.po.UserDetail">
+        SELECT u.cell_phone, u.status, u.create_time, u.update_time, u.creater, u.updater,
+               u.id, u.username, ud.type, ud.name, ud.gender, ud.icon, ud.email, ud.qq, ud.birthday,
+               ud.job, ud.province, ud.city, ud.district, ud.intro, ud.photo, ud.role_id
+        FROM `user` u
+                 LEFT JOIN user_detail ud ON u.id = ud.id
+        WHERE u.id
+        <foreach collection="ids" separator="," item="id" open="in (" close=")">
+            #{id}
+        </foreach>
+    </select>
+    <select id="queryByPage" resultType="com.tianji.user.domain.po.UserDetail">
+        SELECT u.cell_phone, u.status, u.create_time, u.update_time, u.creater, u.updater,
+               u.id, u.username, ud.type, ud.name, ud.gender, ud.icon, ud.email, ud.qq, ud.birthday,
+               ud.job, ud.province, ud.city, ud.district, ud.intro, ud.photo, ud.role_id
+        FROM `user` u
+                 LEFT JOIN user_detail ud ON u.id = ud.id
+        ${ew.customSqlSegment}
+    </select>
+</mapper>

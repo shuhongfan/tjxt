@@ -1,0 +1,269 @@
+{
+  "groups": [
+    {
+      "name": "tj.swagger",
+      "type": "com.tianji.common.autoconfigure.swagger.Knife4jConfiguration",
+      "sourceType": "com.tianji.common.autoconfigure.swagger.SwaggerConfigProperties"
+    },
+    {
+      "name": "tj.mq"
+    },
+    {
+      "name": "tj.redis"
+    },
+    {
+      "name": "tj.mybatis"
+    },
+    {
+      "name": "tj.xxl-job",
+      "type": "com.tianji.common.autoconfigure.xxljob.XxlJobConfig",
+      "sourceType": "com.tianji.common.autoconfigure.xxljob.XxlJobProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "tj.swagger.enable",
+      "type": "java.lang.Boolean",
+      "description": "是否开启swagger功能，默认false",
+      "sourceType": "com.tianji.common.autoconfigure.swagger.SwaggerConfigProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "tj.swagger.enableResponseWrap",
+      "type": "java.lang.Boolean",
+      "description": "是否开启响应结果包装功能，默认false",
+      "sourceType": "com.tianji.common.autoconfigure.swagger.SwaggerConfigProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "tj.swagger.packagePath",
+      "type": "java.lang.String",
+      "description": "API接口扫描包",
+      "sourceType": "com.tianji.common.autoconfigure.swagger.SwaggerConfigProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "tj.swagger.title",
+      "type": "java.lang.String",
+      "description": "API文档标题",
+      "sourceType": "com.tianji.common.autoconfigure.swagger.SwaggerConfigProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "tj.swagger.description",
+      "type": "java.lang.String",
+      "description": "文档描述",
+      "sourceType": "com.tianji.common.autoconfigure.swagger.SwaggerConfigProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "tj.swagger.contactName",
+      "type": "java.lang.String",
+      "description": "联系人姓名",
+      "sourceType": "com.tianji.common.autoconfigure.swagger.SwaggerConfigProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "tj.swagger.contactUrl",
+      "type": "java.lang.String",
+      "description": "联系人主页地址",
+      "sourceType": "com.tianji.common.autoconfigure.swagger.SwaggerConfigProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "tj.swagger.contactEmail",
+      "type": "java.lang.String",
+      "description": "联系人邮箱",
+      "sourceType": "com.tianji.common.autoconfigure.swagger.SwaggerConfigProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "tj.swagger.version",
+      "type": "java.lang.String",
+      "description": "版本",
+      "sourceType": "com.tianji.common.autoconfigure.swagger.SwaggerConfigProperties",
+      "defaultValue": ""
+    },
+    {
+      "name": "tj.mq.host",
+      "type": "java.lang.String",
+      "description": "rabbitmq的地址",
+      "defaultValue": "192.168.150.101"
+    },
+    {
+      "name": "tj.mq.port",
+      "type": "java.lang.Integer",
+      "description": "rabbitmq的端口",
+      "defaultValue": "5672"
+    },
+    {
+      "name": "tj.mq.vhost",
+      "type": "java.lang.String",
+      "description": "rabbitmq的virtual-host地址",
+      "defaultValue": "/tjxt"
+    },
+    {
+      "name": "tj.mq.username",
+      "type": "java.lang.String",
+      "description": "rabbitmq的用户名",
+      "defaultValue": "tjxt"
+    },
+    {
+      "name": "tj.mq.password",
+      "type": "java.lang.String",
+      "description": "rabbitmq的密码",
+      "defaultValue": "123321"
+    },
+    {
+      "name": "tj.mq.listener.retry.enable",
+      "type": "java.lang.Boolean",
+      "description": "是否开启rabbitmq的消费者重试机制",
+      "defaultValue": "true"
+    },
+    {
+      "name": "tj.mq.listener.retry.interval",
+      "type": "java.time.Duration",
+      "description": "消费者重试初始失败等待时长",
+      "defaultValue": "1000ms"
+    },
+    {
+      "name": "tj.mq.listener.retry.multiplier",
+      "type": "java.lang.Integer",
+      "description": "失败等待时长的递增倍数",
+      "defaultValue": "1"
+    },
+    {
+      "name": "tj.mq.listener.retry.max-attempts",
+      "type": "java.lang.Integer",
+      "description": "消费者重试最大重试次数",
+      "defaultValue": "3"
+    },
+    {
+      "name": "tj.mq.listener.retry.stateless",
+      "type": "java.lang.Boolean",
+      "description": "是否是无状态，默认true",
+      "defaultValue": "true"
+    },
+    {
+      "name": "tj.redis.host",
+      "type": "java.lang.Boolean",
+      "description": "是否是无状态，默认true",
+      "defaultValue": "true"
+    },
+    {
+      "name": "tj.redis.host",
+      "type": "java.lang.String",
+      "description": "redis的地址",
+      "defaultValue": "192.168.150.101"
+    },
+    {
+      "name": "tj.redis.password",
+      "type": "java.lang.String",
+      "description": "redis的密码",
+      "defaultValue": "123321"
+    },
+    {
+      "name": "tj.redis.pool.max-active",
+      "type": "java.lang.Integer",
+      "description": "redis的连接池最大连接数",
+      "defaultValue": "8"
+    },
+    {
+      "name": "tj.redis.pool.max-idle",
+      "type": "java.lang.Integer",
+      "description": "redis的最大空闲连接",
+      "defaultValue": "8"
+    },
+    {
+      "name": "tj.redis.pool.min-idle",
+      "type": "java.lang.Integer",
+      "description": "redis的最小空闲连接",
+      "defaultValue": "1"
+    },
+    {
+      "name": "tj.redis.pool.max-wait",
+      "type": "java.lang.Integer",
+      "description": "无连接时最大空闲等待时间",
+      "defaultValue": "300"
+    },
+    {
+      "name": "tj.jdbc.host",
+      "type": "java.lang.String",
+      "description": "数据库地址",
+      "defaultValue": "192.168.150.101"
+    },
+    {
+      "name": "tj.jdbc.port",
+      "type": "java.lang.Integer",
+      "description": "数据库端口",
+      "defaultValue": "3306"
+    },
+    {
+      "name": "tj.jdbc.database",
+      "type": "java.lang.String",
+      "description": "数据库database名",
+      "defaultValue": ""
+    },
+    {
+      "name": "tj.jdbc.username",
+      "type": "java.lang.String",
+      "description": "数据库用户名",
+      "defaultValue": "root"
+    },
+    {
+      "name": "tj.jdbc.password",
+      "type": "java.lang.String",
+      "description": "数据库密码",
+      "defaultValue": "123"
+    },
+    {
+      "name": "tj.xxl-job.accessToken",
+      "type": "java.lang.String",
+      "description": "xxl-job的访问token",
+      "defaultValue": ""
+    },
+    {
+      "name": "tj.xxl-job.admin.address",
+      "type": "java.lang.String",
+      "description": "xxl-job的管理端地址",
+      "defaultValue": ""
+    },
+    {
+      "name": "tj.xxl-job.executor.appName",
+      "type": "java.lang.String",
+      "description": "xxl-job的执行器名称",
+      "defaultValue": ""
+    },
+    {
+      "name": "tj.xxl-job.executor.address",
+      "type": "java.lang.String",
+      "description": "xxl-job的执行器地址，ip:port，可以为空",
+      "defaultValue": ""
+    },
+    {
+      "name": "tj.xxl-job.executor.ip",
+      "type": "java.lang.String",
+      "description": "xxl-job的执行器ip",
+      "defaultValue": ""
+    },
+    {
+      "name": "tj.xxl-job.executor.port",
+      "type": "java.lang.String",
+      "description": "xxl-job的执行器端口，如果为空则随机",
+      "defaultValue": ""
+    },
+    {
+      "name": "tj.xxl-job.executor.logPath",
+      "type": "java.lang.String",
+      "description": "xxl-job的执行器日志目录",
+      "defaultValue": ""
+    },
+    {
+      "name": "tj.xxl-job.executor.logRetentionDays",
+      "type": "java.lang.String",
+      "description": "xxl-job的执行器日志存储最长周期，过期会被清理",
+      "defaultValue": ""
+    }
+  ],
+  "hints": []
+}

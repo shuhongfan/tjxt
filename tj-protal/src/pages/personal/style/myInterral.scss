@@ -1,0 +1,52 @@
+// 个人中心-我的积分
+.myInterralWrapper, .myInterralRankingWrapper{
+    .listCont{
+       .list, .listRt{
+         width: calc(50% - 15px);
+         .tit{
+            margin: 30px 0 15px 0;
+            line-height: 40px;
+            font-weight: 600;
+            .more{
+                font-weight: 400;
+                font-size: 14px;
+                color: #2080F7;
+            }
+         }
+         .tab{
+            border-top: solid 1px #eeeeee;
+            border-left: solid 1px #eeeeee;
+            .item{
+                border-right: solid 1px #eeeeee;
+                border-bottom: solid 1px #eeeeee;
+                padding: 35px 30px;
+                font-weight: 600;
+                line-height: 32px;
+            }
+            .bt{
+                width: 90px;
+                height: 32px;
+                line-height: 32px;
+                border-radius: 32px;
+                background: #FF4C4C;
+                font-size: 14px;
+                font-weight: 400;
+            }
+         }
+       }
+    }
+}
+// 积分榜 - 学霸天梯榜
+.myInterralRankingWrapper{
+    .personalCards{
+        padding-top:0px;
+        .breadcrumb{
+            padding-top: 30px;
+        }
+        .cardsTitle{
+            border-bottom: solid 1px #eeeeee;
+            padding-bottom: 15px;
+            margin-bottom: 0px;
+        }
+    }
+}

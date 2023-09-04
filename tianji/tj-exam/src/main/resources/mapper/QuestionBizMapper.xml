@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tianji.exam.mapper.QuestionBizMapper">
+
+    <select id="countQuestionScoresByBizIds" resultType="com.tianji.api.dto.IdAndNumDTO">
+        SELECT 	qb.biz_id AS id, SUM( q.score ) AS num
+        FROM question_biz qb
+            LEFT JOIN question q on q.id = qb.question_id
+        WHERE qb.biz_id IN
+        <foreach collection="bizIds" separator="," open="(" item="id" close=")">
+            #{id}
+        </foreach>
+        GROUP BY qb.biz_id
+    </select>
+    <select id="countUsedTimes" resultType="com.tianji.api.dto.IdAndNumDTO">
+        SELECT question_id AS id,  COUNT(biz_id) AS num
+        FROM question_biz
+        WHERE question_id IN
+        <foreach collection="qIds" separator="," open="(" item="id" close=")">
+            #{id}
+        </foreach>
+        GROUP BY question_id
+    </select>
+</mapper>

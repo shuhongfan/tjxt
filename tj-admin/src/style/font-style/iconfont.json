@@ -1,0 +1,65 @@
+{
+  "id": "3557062",
+  "name": "tjxtglxt",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "天机学堂管理系统",
+  "glyphs": [
+    {
+      "icon_id": "31443278",
+      "name": "收起@2x",
+      "font_class": "a-shouqi2x",
+      "unicode": "e654",
+      "unicode_decimal": 58964
+    },
+    {
+      "icon_id": "30960027",
+      "name": "icon_order@2x",
+      "font_class": "a-icon_order2x",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "30959949",
+      "name": "icon_user@2x",
+      "font_class": "a-icon_user2x",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "30959709",
+      "name": "icon_class@2x",
+      "font_class": "a-icon_class2x",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "30959711",
+      "name": "icon_home@2x",
+      "font_class": "a-icon_home2x",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "30959712",
+      "name": "icon_yx@2x",
+      "font_class": "a-icon_yx2x",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "30959714",
+      "name": "icon_hd@2x",
+      "font_class": "a-icon_hd2x",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "30959715",
+      "name": "icon_course@2x",
+      "font_class": "a-icon_course2x",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+server:
+  port: 8086  #端口
+  tomcat:
+    uri-encoding: UTF-8   #服务编码
+spring:
+  profiles:
+    active: dev
+  application:
+    name: course-service
+  main:
+    allow-circular-references: true
+  cloud:
+    nacos:
+      config:
+        file-extension: yaml
+        shared-configs: # 共享配置
+          - data-id: shared-spring.yaml # 共享spring配置
+          - data-id: shared-redis.yaml # 共享redis配置
+          - data-id: shared-mybatis.yaml # 共享mybatis配置
+          - data-id: shared-logs.yaml # 共享日志配置
+          - data-id: shared-feign.yaml # 共享feign配置
+          - data-id: shared-mq.yaml # 共享MQ配置
+          - data-id: shared-seata.yaml # 共享seata配置
+          - data-id: shared-xxljob.yaml # 共享seata配置
+tj:
+  swagger:
+    enable: true
+    package-path: com.tianji.course.controller
+    title: 天机学堂 - 课程系统接口文档
+    description: 该服务包含课程管理相关功能
+    contact-name: 传智教育·研究院
+    contact-url: http://www.itcast.cn/
+    contact-email: zhanghuyi@itcast.cn
+    version: v1.0
+    enableResponseWrap: true
+  auth:
+    resource:
+      enable: false
+  jdbc:
+    database: tj_course

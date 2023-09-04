@@ -1,0 +1,8 @@
+:deep(.titleDrawer){
+  cursor: pointer;
+  &:hover,
+  &:active,&.fouse{
+    color: var(--color-main);
+  }
+}
+

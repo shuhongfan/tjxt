@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tianji.trade.mapper.OrderMapper">
+
+    <select id="getById" resultType="com.tianji.trade.domain.po.Order" parameterType="java.lang.Long">
+        SELECT id, user_id, pay_order_no, status, message, total_amount, real_amount, discount_amount, pay_channel,
+               coupon_id, create_time, pay_time, close_time, finish_time, refund_time, update_time, creater,
+               updater
+        FROM `order`
+        WHERE id = #{id}
+    </select>
+</mapper>

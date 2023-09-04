@@ -1,0 +1,39 @@
+{
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "start": "vite --open --mode mock",
+    "dev": "vite --open --mode development",
+    "dev:test": "vite --open --mode test",
+    "dev:prod": "vite --open --mode product",
+    "build": "vite build --mode development",
+    "build:test": "vite build --mode test",
+    "build:prod": "vite build --mode pro",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tinymce/tinymce-vue": "^5.0.0",
+    "@vitejs/plugin-vue-jsx": "^1.3.10",
+    "axios": "^0.27.2",
+    "echarts": "^5.4.0",
+    "element-plus": "^2.2.9",
+    "install": "^0.13.0",
+    "moment": "^2.29.4",
+    "npm": "^8.15.0",
+    "nprogress": "^0.2.0",
+    "pinia": "^2.0.15",
+    "pinia-plugin-persistedstate": "^1.6.1",
+    "sass": "^1.53.0",
+    "swiper": "^8.3.2",
+    "tinymce": "^5.10.2",
+    "vite-svg-loader": "^3.4.0",
+    "vod-js-sdk-v6": "^1.4.14",
+    "vue": "^3.2.25",
+    "vue-router": "^4.1.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "vite": "^2.9.9"
+  }
+}

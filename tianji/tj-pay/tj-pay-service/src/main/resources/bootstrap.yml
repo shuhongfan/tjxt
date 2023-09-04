@@ -1,0 +1,48 @@
+server:
+  port: 8087  #端口
+  tomcat:
+    uri-encoding: UTF-8   #服务编码
+  error:
+    include-message: always #返回的响应体带上message
+spring:
+  profiles:
+    active: dev
+  application:
+    name: pay-service
+  cloud:
+    nacos:
+      config:
+        file-extension: yaml
+        shared-configs: # 共享配置
+          - dataId: shared-spring.yaml # 共享spring配置
+          - dataId: shared-redis.yaml # 共享redis配置
+          - dataId: shared-mybatis.yaml # 共享mybatis配置
+          - dataId: shared-logs.yaml # 共享日志配置
+          - dataId: shared-feign.yaml # 共享feign配置
+          - dataId: shared-mq.yaml # 共享mq配置
+          - dataId: shared-xxljob.yaml # 共享mq配置
+tj:
+  swagger:
+    enable: true
+    enableResponseWrap: true
+    package-path: com.tianji.pay.controller
+    title: 天机学堂 - 支付中心接口文档
+    description: 该服务提供微信、支付宝等各种平台的支付、退款等功能
+    contact-name: 传智教育·研究院
+    contact-url: http://www.itcast.cn/
+    contact-email: zhanghuyi@itcast.cn
+    version: v1.0
+  jdbc:
+    database: tj_pay
+  pay:
+    notifyHost: https://6b9f16dd.r2.cpolar.top/ps
+    ali:
+      appId: "2021002173680104"
+      merchantPrivateKey: "MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCYTgKj2xEIJi7lqjGRuQ/XWNDRuhoMtWvQg1DzF3fDWodh6WMed5V7mi3s4zXLnm4TvHVazgLnVXJlONxG4EsVJRGp3hY1fSGAAcByRC2E8E+NdhIvaOAWUuEid6AeshfNqmePnJyHxpxf9ZYn0Bij0kM8yMwv1izkBmsuydXroQegYfias6HT+CQ9mgU0awb6ZPeGqC6sw9Tv991jOohGv4xgEVjRh69pvB8Eo1vubYJ8mhOEf5xwWkx8/n7tDa4uA7ioUlgLRxhtOkCkpTQXzLAzm8gxoJlEYL/sFR3plaPBRAafWoKdfF55W0SBXDhhNqqce+r1H4pw4IyZxqyrAgMBAAECggEAYAcnoPpZlcLFZObXFCMTutpz5xgonoSwsqppGqxcRZ7Jp1FIvof1hxYiCK8FVxnQG7+CWrtzlzoHw4yDTmjSzkUuCuVNKXJ48cWo+iLEdII0FmQweRXt3AVrj5jPKyts2K6tVx4Oj4kJRXOJthZ9wqSq4iNUooCukyL852Y467P/Me+9Vr2vQb117qLaNTwvR2GV6OZUNQPl7qKNsp86e5lREIBHPk8uhQO3KS+QPPvTDkKBH+bNo7Bu4L4J0ITdvjU9FupaQ6xfFCOrgu7P2bw9Mk2JM6jHp1hEjuoLVGA97sL6CSPhQu9s9KJbup2DGOI1qQoEATBypHFueYv4yQKBgQD57xI1iPUl3tVNH5e3yYa08NLS+mV9N3tRTjIWHbMwQKMbraaO+dGQRGiytjejao3y0EVFuqOuhbXAxtvb1pUukASqY3zW01zzVNNw8nO3zeVPo+xWLAvlnyX3MekKMYjo1dAyWBzXuPgo3D413nMiPZ8oOgtbpTyu/dTeN3NJTQKBgQCcAFWSUinmZ3x9Xr779CeX1MsKG+++C4iLP7vNP8Lf8IcPE8NnHYZTQqDuvq1Itai7UbhZX95itYqjp9SlXT4hSrMGI7qwobJ0vXxXrNN6VwZtz1N75vnIrZNHnTFMWTUBKCySLcpsqs7qCSQEv6luOQUSUH/0gaN6txOq5W4R1wKBgH4GdLIV6zc7U2beJUyBC7G1NTk5FW+8SCxJN6w7MZ2FGjncp/20Ll2GgRyMESYPlp/3MNbmM57OwUUBgN8rJnIiIJgiLlLMpTP1c+CiAIOQCK7Nw1/4Oc+BHk21FwMS0yxElASutWx5UniYBa54CqobVGOeURfXC/BZAbtDTpiJAoGAMR3B03HfE1Xd0jM0emti0+EBlEs7bmB/Oyhz3qmGl69JNqwIR7z5/9johoKuWEgpueB+5FTU1ctGvUQoJXB4EU9Nkk9JhjdC0pKeRZR6ePhRY9108XvFhTNxPYj2bo1frN+TOOsF4rTctL7wAja+B6AYQq3pu3fdmtNtc88Mmr0CgYEAuDD/PzVTLMYgEqq0ruZcCyFd0HwMV8KoC07aXXeLZT/IGtoJASFkWIxcoyK8NVZvDqoGkpaLAw3G7CmzoxpqSvyMWwHGdZy7KDV55g5O9r4Lt/dti7xt6gBYm8XB1X7cLcu0x9lYs6KL01To+Ep8DxSO7LUODQ0Utu3Pkf9W1qc="
+      publicKey: "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhUnjdAKwZApwZEcfq+5L0pa77Vg3mqcoXv+th8RR0SYotkPsH1f2JkbS48ySaSCM6YNWSMNfqp5qdOla2zUJOBnJ/yaBg7s7fVD6V3M2mEog8kCDYGKt/3P4VII3xYl8lFYMQ3IcFRELkxCBBCA8JDKmf5z2R4F/Z/jFFEuOwxaJvp+7Ke9OzZHYdWGNnU6QP8YYLYUeX7VNZLHEuly34ExAw6A+yJkNDsYEho2Lu31QjT2pLh9g+88MlRfiI92iN25O9NVdeM4f5RcpvBPrBQZQs9tlFmALYSFS3prIf3FAobWM+W7iwxT6J25nFIhst1DdJQfIBpaeRUJVTkn99QIDAQAB"
+    wx:
+      appId: "wx0ca99a203b1e9943"
+      mchId: "1561414331"
+      mchSerialNo: "4B3B3DC35414AD50B1B755BAF8DE9CC7CF407606"
+      privateKey: "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChXKhMDNcjxTBO\nFF2NOHai5NwChO12f3KQbmqCNEXWImqC5OtTEmcy/8Kzx8i243TtkVFv+Eqvac69\n/gpytl8sK8GFCzzUExgtejrtr3cJS//0eaJURGVG9zDPHrGV5vtXqmUPzAzX5SbM\nsIEKAZoe2bRJRz5zNNx+RMReSOC7F4xn+5tQd3XmZomwFGKO0oryKEocw5IGdYL6\n1zRkUK9yRtyDZKq7hvPv11YQgnD8+EeGgo5/0kk62sbWW545Hw1qVqkQjkOfbdtL\nQjz4BnbakUwdRn3qoCjga8QQp0EKaGbIu4haHReyP8QQZhq0KlRX6XjBbrk8k4yK\nURVkjrxVAgMBAAECggEAT7HjrSvqVdBeOzHzwnvQnENMJjJg1dW8T3k5QXVvyILW\n+C73yt+b+KQ5FXHmv+03It5Sympm+JvZcBy4LE/GUZqKyZrzQAruNgfYcuvmbsEK\neURZ2CSvoI0VnjYan16lZHbT0ymEblzO/Olv0fFYnUQItuho/51sCTENi0OTOtNt\nrWahbOnrBk+WsgmhNen+W/KdFXA9EOFKoFclAPEpCUa/mi1/w7AQecHZUISeRXix\nSZbhHIF4bf7BDXqkgtnWEkBX2hZP61TibGiRUgHvVC6V5+bi07cv7jr6IjJdNvwK\nMjAw2GgwZvyb8HvcQ0M7ULmYC6ZXYfVuvZDXJuMCAQKBgQDTAltDJ3oE1tJtk3qg\nichuWf8OKlvNmN2fxiDG+rxOgTi2gL9N3BKIYWQRo3f2B9C243Z1iM+Q/4LPii6F\niLTSPQYRcNaryB1BtNGjexHMK5NuCfZ2etx3zmYz86YiWY6ZsFuISFttdPq01MKR\nxN/gIfiXvRlv4g1SIK6vy3lpjQKBgQDDxF/Q2xNFZq8WZ4M1DW3r9EcnYgn6U8qK\nfDJFvW4VT9bHOJOxxmZ3oIccSuPky7gm9DlxRC632z1FyPu6buC7pp7X8+JJPmkq\n2c0fKYl5B5boJdBCs8QrRQ89oORFuB3/2on9N6YCMccf1VQ3kspm5GhEkO/mdN7u\nNYBRq1oX6QKBgAT77UPszskGefn0ndTk7EMPBSNEhN6aWcHIYEXS7le8XaaR6/Le\n2+E0y7RO9CpvjNKFFOs5zA1Uu7ZDQU4OKJc+scH/tFJia659ouYFpin4bYcP3S53\nQHXj/i4D90ygaOngbIkPjHlNZg6XZ/EhgVg99S1AXjVyVXY3J2knmTqRAoGAfuht\nyOJMMuBnPpnqB9ll2eFowxIeL8Zj9bSfjnBHzc8NB+cYb9WTFZfeHqw54ldiUPZf\nypqNwqiApx2semZoj51rOcmjdyHbYWkCPWJa+Te/T008HhGVaQuC3svPT5cU84jD\njYCmwKNuV6eeycwCJAOLyG9A5d/7qObMAaWYaQkCgYBge3oRaGlDujnn0UDwLppi\nytsr4TDuDvkaRLCx4OrT86Yr+gWGjo46pBYIPJ8yy59yRTVYTpDiOLLC51qweh2w\nKo6+/qtzNwp41jadphbpEgGRE+mpvUWtlj4yPkojSY83Gh36eWVGISDG95z1DDjj\nsGT8hwQgcQJHrQhWn/cltQ==\n-----END PRIVATE KEY-----"
+      apiV3Key: "CZBK51236435wxpay435434323FFDuv3"

@@ -1,0 +1,10 @@
+docker run \
+-e PARAMS="--spring.datasource.url=jdbc:mysql://192.168.150.101:3306/xxl_job?Unicode=true&characterEncoding=UTF-8 \
+--spring.datasource.username=root \
+--spring.datasource.password=123" \
+--restart=always \
+-p 28080:8080 \
+-v xxl-job-admin-applogs:/data/applogs \
+--name xxl-job-admin \
+-d \
+xuxueli/xxl-job-admin:2.3.0

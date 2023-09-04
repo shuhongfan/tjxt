@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tianji.course.mapper.CourseCatalogueDraftMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.tianji.course.domain.po.CourseCatalogueDraft">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="trailer" property="trailer" />
+        <result column="course_id" property="courseId" />
+        <result column="type" property="type" />
+        <result column="parent_catalogue_id" property="parentCatalogueId" />
+        <result column="media_id" property="mediaId" />
+        <result column="video_id" property="videoId" />
+        <result column="video_name" property="videoName" />
+        <result column="living_start_time" property="livingStartTime" />
+        <result column="living_end_time" property="livingEndTime" />
+        <result column="play_back" property="playBack" />
+        <result column="c_index" property="cIndex" />
+        <result column="media_duration" property="mediaDuration" />
+        <result column="dep_id" property="depId" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="creater" property="creater" />
+        <result column="updater" property="updater" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, trailer, course_id, type, parent_catalogue_id, media_id, video_id, video_name, living_start_time, living_end_time, play_back, c_index, media_duration, dep_id, create_time, update_time, creater, updater
+    </sql>
+
+</mapper>

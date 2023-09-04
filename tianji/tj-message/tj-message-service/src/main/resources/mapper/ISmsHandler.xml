@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tianji.message.mapper.UserInboxMapper">
+
+    <select id="queryLatestPublicNotice" resultType="com.tianji.message.domain.po.UserInbox">
+        SELECT id, user_id, type, title, content, is_read, publisher, push_time, expire_time
+        FROM user_inbox
+        WHERE user_id = #{userId} AND type IN (0, 1, 2, 3)
+        ORDER BY push_time
+        LIMIT 1
+    </select>
+</mapper>

@@ -1,0 +1,31 @@
+{
+  "groups": [
+    {
+      "name": "tj.auth.resource",
+      "type": "com.tianji.authsdk.resource.config.ResourceInterceptorConfiguration",
+      "sourceType": "com.tianji.authsdk.resource.config.ResourceAuthProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "tj.auth.resource.enable",
+      "type": "java.lang.Boolean",
+      "description": "是否开启登录拦截功能，如果开启则需要指定拦截路径，默认拦截所有",
+      "sourceType": "com.tianji.authsdk.resource.config.ResourceAuthProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "tj.auth.resource.includeLoginPaths",
+      "type": "java.util.List",
+      "description": "要拦截的路径，例如：/user/**",
+      "sourceType": "com.tianji.authsdk.resource.config.ResourceAuthProperties"
+    },
+    {
+      "name": "tj.auth.resource.excludeLoginPaths",
+      "type": "java.util.List",
+      "description": "不拦截的路径，例如：/user/**",
+      "sourceType": "com.tianji.authsdk.resource.config.ResourceAuthProperties"
+    }
+  ],
+  "hints": []
+}

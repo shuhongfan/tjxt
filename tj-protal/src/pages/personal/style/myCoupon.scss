@@ -1,0 +1,55 @@
+// 我的优惠券-列表
+.couponWrapper{
+    .personalCards{
+        padding-bottom: 0px;
+    }
+    .headTop{
+        .fx{
+            span{
+                display: inline-block;
+                width: 140px;
+                text-align: right;
+                line-height: 28px;
+            }
+        }
+    }
+    .myCouponItems{
+        padding-top:40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .exchangeCoupon{
+        span{
+            display: inline-block;
+            width: 100px;
+            line-height: 40px;
+        }
+    }
+}
+// 使用说明
+.couponWrapperExplain{
+    .personalCards{
+        padding-bottom: 60px;
+    }
+    .title{
+        font-weight: 600;
+        font-size: 20px;
+        border-bottom: 1px solid #EEEEEE;
+        margin-bottom: 30px;
+        padding: 4px 0px 25px 0px;
+    }
+    .cont{
+        font-size: 14px;
+        font-weight: 400;
+        color: #7F878C;
+        line-height: 28px;
+        .tit{
+            font-weight: 600;
+            font-size: 16px;
+            color: #19232B;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -1,0 +1,185 @@
+// 我的订单 - 列表
+.myOrderWrapper{
+    .table{
+        margin-top: 37px;
+        .tabHead, .tabInfo,.tabCont > .orderList{
+            display: flex;
+            background: #F5F6F9;
+            
+            font-size: 14px;
+            line-height: 50px;
+            padding: 0 25px 0 30px;
+            margin-bottom: 40px;
+            span{
+                min-width: 100px;
+                text-align: center;
+            }
+        }
+        .tabHead{
+            font-weight: 600;
+        }
+        .tabInfo{
+            background: #fff;
+            border: 1px solid #EEEEEE;
+            margin-bottom: 0px;
+            .time{
+                margin-right: 40px;
+            }
+        }
+        .tabCont{
+            .orderList{
+                background: #fff;
+                align-items: center;
+                margin-bottom: 0;
+                padding:15px 25px 15px 30px ;
+                .btCont{
+                    display: flex;
+                    flex-direction: column;
+                    .bt{
+                        font-size: 14px;
+                        border-radius: 20px;
+                        margin-bottom: 5px;
+                    }/*
+                    .bt:first-child{
+                        margin-bottom: 15px;
+                    }
+                    .bt:last-child{
+                        margin-bottom: 0px;
+                    }*/
+                }
+            }
+            border-left: 1px solid #EEEEEE;
+            border-right: 1px solid #EEEEEE;
+            border-bottom: 1px solid #EEEEEE;
+        }
+        .alignLeft{
+            text-align: left !important;
+        }
+    }
+    .pageination{
+        padding-top:20px;
+        padding-bottom: 10px;
+    }
+}
+// 我的订单 - 详情
+.myOrderDetailsWrapper{
+    .label{
+        font-size: 14px;
+        color: #19232B;
+        margin: 8px 0;
+        span{
+            font-weight: 600;
+            font-size: 20px;
+            color: #19232B;
+            margin-right: 10px;
+        }
+    }
+    .orderTit{
+        line-height: 60px;
+        font-weight: 600;
+        font-size: 20px;
+        color: #7F878C;
+    }
+    .linePint{
+        display: flex;
+        .nodePoint{
+            width: 20%;
+            position: relative;
+            text-align: center;
+            .pintTit{
+                color: #2080F7;
+            }
+            .circular{
+                position: relative;
+                margin: 10px auto 15px auto;
+                width: 11px;
+                height: 11px;
+                background: #FFFFFF;
+                border: 2px solid #2080F7;
+                border-radius: 11px;
+                z-index: 2;
+            }
+            .time{
+                font-size: 12px;
+                color: #80878C;
+                line-height: 20px;
+            }
+            &::after{
+                position: absolute;
+                content: '';
+                display: inline-block;
+                top:37px;
+                left: 50%;
+                width: 100%;
+                height: 1px;
+                background-color: #2080F7;
+            }
+            &:last-child{
+                &::after{
+                    display: none;
+                }
+            }
+        }
+    }
+    .info{
+        font-size: 14px;
+        line-height: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-top: 40px;
+        .fx{
+            align-items: top;
+            line-height: 22px;
+        }
+        .pirc{
+            display: inline-block;
+            width: 120px;
+            text-align: right;
+        }
+    }
+    .refundCont{
+        .lab{
+            width: 100px;
+            line-height: 40px;
+        }
+        .fx{
+            margin-bottom: 20px;
+        }
+    }
+    .refundDetailsCont{
+        .tab{
+            border-left:solid 1px #EEEEEE;
+            border-top:solid 1px #EEEEEE;
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 14px;
+            .ut, .row{
+                border-right:solid 1px #EEEEEE;
+                border-bottom:solid 1px #EEEEEE;
+                width: 50%;
+                padding: 8px 20px;
+                line-height: 35px;
+            }
+            .row{
+                width: 100%;
+            }
+            .fx-wp span{
+                display: inline-block;
+                width: 50%;
+            }
+        }
+    }
+    .dialog-footer{
+        display: flex;
+        justify-content: flex-end;
+        .bt{
+            width: 80px;
+            height: 36px;
+            line-height: 36px;
+            font-size: 14px;
+            margin-left: 20px;
+            border-radius: 4px;
+        }
+    }
+}

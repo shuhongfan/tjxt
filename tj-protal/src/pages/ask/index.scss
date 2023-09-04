@@ -1,0 +1,102 @@
+.askWrapper {
+  .askCont{
+    margin: 30px auto 40px auto;
+    
+    font-size: 14px;
+    .formCont{
+      padding: 20px 30px;
+      border-radius: 8px;
+      .subCont{
+        width: 103px;
+        height: 32px;
+        span{
+          border-radius: 30px;
+          line-height: 30px;
+        }
+      }
+    }
+    .title{
+      font-size: 20px;
+      font-weight: 600;
+      border-bottom: 1px solid #EEEEEE;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+    }
+    .desc{
+      color: #80878C;
+      line-height: 50px;
+      font-size: 14px;
+    }
+  }
+}
+// 提问详情、回复相关样式
+.askDetailsWrapper{
+  .askCont{
+    padding: 20px 30px;
+    font-size: 14px;
+    border-radius: 8px;
+    margin-top: 30px;
+    .userInfo{
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      color: var(--color-font3);
+      img{
+        width: 24px;
+        height: 24px;
+        border-radius: 24px;
+        margin-right: 10px;
+      }
+    }
+    .askInfo{
+      padding-left: 34px;
+      line-height: 32px;
+    }
+  }
+  .answerCont{
+    padding: 20px 30px;
+    font-size: 14px;
+    border-radius: 8px;
+    .subCont {
+      margin-top: 20px;
+      .bt{
+        width: 103px;
+        height: 32px;
+        line-height: 32px;
+        border-radius: 25px;
+      }
+    }
+    .answer{
+      img{
+        width: 24px;
+        height: 24px;
+        border-radius: 24px;
+        margin-right: 10px;
+      }
+    }
+    .answerItems{
+      .items{
+        .cont{
+          padding: 10px 10px 20px 34px;
+          line-height: 24px;
+        }
+      }
+      .replyCont{
+        padding-left: 34px;
+      }
+    }
+  }
+  .dialogReplyCont{
+    height: 80vh;
+    overflow: auto;
+    .items{
+      .cont{
+        padding: 10px 10px 20px 34px;
+        line-height: 24px;
+      }
+    }
+  }
+  .activeLiked{
+    color: var(--color-main);
+  }
+}

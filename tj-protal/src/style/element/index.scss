@@ -1,0 +1,201 @@
+/* 只需要重写你需要的即可 */
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': #2080F7,
+    ),
+  ),
+);
+
+.el-collapse-item__content{
+  font-size: 14px;
+}
+// Elmessage 
+.el-button{
+  background: #2080F7 !important;
+  border-radius: 4px;
+}
+
+// 表单 相关
+.el-form-item{
+  margin-bottom: 20px;
+}
+.el-form-item__error{
+  left: auto;
+  top: 4;
+  right: 0;
+}
+.el-input__wrapper{
+  padding: 5px 11px;
+}
+.el-input__wrapper.is-focus{
+  box-shadow:0 0 0 1px var(--color-font1) inset;
+}
+// 弹框 dialog
+.el-dialog__header{
+  // padding-bottom: 0;
+  margin-right: 0;
+}
+
+.el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev, .el-pagination.is-background .el-pager li{
+  background-color: #fff;
+  border: 1px solid #D9D9D9;
+  border-radius: 2px;
+}
+.el-pagination__sizes .el-input__wrapper{
+  padding: 1px 11px;
+  margin-left: 16px;
+}
+// Elmessagebox 样式更改
+.el-message-box__btns .el-button{
+  background: #E1E6F0 !important;
+  color: #19232B;
+}
+.el-message-box__btns .el-button:hover, .el-message-box__btns .el-button:active{
+  background: #CDD3E0 !important;
+  color: #19232B;
+  border:solid 1px transparent;
+}
+.el-message-box__btns .el-button--primary{
+  background: var(--color-main) !important;
+  color: #fff;
+}
+.el-message-box__btns .el-button--primary:hover{
+  background: #519FFF !important;
+  color: #fff;
+  border:solid 1px transparent;
+}
+.el-message-box__btns .el-button--primary:active{
+  background: #1C55CF !important;
+  color: #fff;
+  border:solid 1px transparent;
+}
+
+.el-message-box__btns .el-button:focus-visible{
+  outline: 0 solid var(--el-button-outline-color);
+  outline-offset: 0px;
+}
+
+// 课程目录的使用了collapse
+.el-collapse-item__header, .el-collapse-item__wrap{
+  background-color: transparent;
+  border:none;
+  color: #FFF;
+}
+.el-collapse{
+  border:none;
+}
+
+// 视频播放模块 
+.classLearning .el-input__wrapper{
+  height: 33px;
+  background-color: #000000;
+  box-shadow: 0 0 0 0 transparent
+}
+.classLearning .el-input .el-input__count .el-input__count-inner{
+  background-color: #000000;
+}
+.classLearning .el-textarea__inner{
+  background-color: #000000;
+  box-shadow: 0 0 0 0 transparent
+}
+.classLearning .el-textarea .el-input__count{
+  background-color: #000000;
+}
+.classLearning .el-input__inner{
+  color: #7A838A;
+}
+.classLearning .questCont .el-checkbox__label{
+  color: #fff;
+}
+.classLearning .questCont .el-checkbox__inner{
+  background-color: #292F37;
+}
+// 答题
+.classLearning .ExQuestions .el-textarea__inner{
+  background-color: #fff;
+  box-shadow: 0 0 0 1px var(--el-input-border-color,var(--el-border-color)) inset;
+}
+.classLearning .ExQuestions .el-textarea .el-input__count{
+  background-color: #fff;
+}
+.el-checkbox__inner{
+  border-radius: 12px;
+}
+.el-radio-group{
+  display: block;
+}
+.el-radio-group label{
+  width: 100%;
+  line-height: 40px;
+}
+.el-checkbox{
+  width: 100%;
+  line-height: 40px;
+  height: 40px;
+}
+// 我的课程
+.el-table .el-table__cell{
+  padding: 12px 0 ;
+}
+// 购物车
+.cartsWrapper .el-checkbox__inner{
+  border-radius: 0;
+}
+.cartsWrapper .el-checkbox{
+  width: 50px;
+  line-height: 40px;
+  height: 40px;
+}
+
+
+// 弹框 - 退款使用
+.myOrderDetailsWrapper .el-dialog__body{
+  padding:20px 30px 20px 30px;
+}
+.myOrderDetailsWrapper .el-dialog__header{
+  padding: 20px 30px 0px 30px;
+  font-weight: 600;
+}
+.myOrderDetailsWrapper .el-dialog__headerbtn{
+  right: 8px;
+}
+
+.el-textarea__inner:focus{
+  box-shadow: 0 0 0 1px var(--color-font1) inset;
+}
+.el-cascader .el-input.is-focus .el-input__wrapper {
+  box-shadow: 0 0 0 1px var(--color-font1,var(--color-font1)) inset;
+}
+
+.el-pagination.is-background .el-pager li:not(.is-disabled).is-active{
+  background-color: var(--color-main);
+}
+
+.el-table, .el-table thead{
+  color: var(--color-font1);
+ }
+
+ .el-checkbox__input.is-checked .el-checkbox__inner{
+  background-color: var(--color-main);
+  border-color:var(--color-main);
+ }
+ .el-checkbox__input.is-checked+.el-checkbox__label {
+  color: var(--color-main);
+}
+.el-select-dropdown__item.selected{
+  font-size: 14px;
+  font-weight: 400;
+  color: #19232B;
+  :hover{
+    color: var(--color-main);
+  }
+}
+.el-select-dropdown__item.hover{
+  color:var(--color-main);
+  // background-color: #fff;
+}
+.el-select-dropdown__item:hover{
+  // background-color: var(--color-hover);
+  color: var(--color-main);
+}

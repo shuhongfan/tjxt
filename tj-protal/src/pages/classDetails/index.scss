@@ -1,0 +1,118 @@
+.classDetailsWrapper{
+    .detailHead{
+        position: relative;
+        margin-bottom: 20px;
+        min-height: 350px;
+        .backGround{
+            position: absolute;
+            z-index: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 350px;
+                opacity: 0.23;
+                filter: blur(30px);
+            }
+        }
+        .topInfo{
+            position: relative;
+            z-index: 1;
+            margin-bottom: 20px;
+            img{
+                border-radius: 8px;
+                margin-right: 40px;
+            }
+            i{
+                position: relative;
+                top: 1px;
+            }
+            .wx{
+                position: relative;
+                top: 3px;
+            }
+            .item{
+                margin-bottom: 40px;
+            }
+            .title{
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 60px;
+                margin-bottom: 20px;
+            }
+            .card{
+                border-right: 1px solid var(--color-font3);
+                margin-right: 50px;
+                padding-right: 50px;
+                .tit{
+                    font-weight: 400;
+                    font-size: 14px; 
+                    color: var(--color-font3);
+                    margin-bottom: 10px;
+                }
+                .info{
+                    font-weight: 600;
+                    font-size: 18px;
+                }
+            }
+            .bt-wt{
+                line-height: 22px;
+            }
+            
+        }
+        .buyCont{
+            position: relative;
+            width: 100%;
+            box-sizing: border-box;
+            height: 90px;
+            padding: 20px;
+            background: var(--color-white);
+            border-radius: 8px;
+            .price{
+                font-weight: 600;
+                font-size: 38px;
+                color: var(--color-error);
+            }
+            .desc{
+                color: var(--color-font3);
+                padding-left: 60px;
+                position: relative;
+                line-height: 50px;
+                &::before{
+                    content: '';
+                    display: inline-block;
+                    width: 1px;
+                    height: 26px;
+                    position: relative;
+                    left: -30px;
+                    top: 8px;
+                    background-color: var(--color-background4);
+                }
+            }
+            .buy{
+                span{
+                    line-height: 50px;
+                     padding: 16px 40px;
+                }
+            }
+        }
+    }
+    .DetailsContent{
+        margin-bottom: 40px;
+        .leftCont{
+            padding: 30px;
+            border-radius: 8px;
+            margin-right: 20px;
+            flex: 1;
+        }
+        .ritCont{
+            width: 345px;
+        }
+    }
+    .isCollection{
+        color: var(--color-main);
+    }
+}

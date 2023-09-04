@@ -1,0 +1,137 @@
+.classLearning{
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+    min-width: 100%;
+    min-height: 100%;
+    color: var(--color-white);
+    .videoCont{
+        flex: 1;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        .head{
+            background-color: #1D1D1D;
+            height: 60px;
+            line-height: 60px;
+            img{
+                margin: 8px 0;
+                width: 44px;
+                height: 44px;
+            }
+            .line{
+                color: #979797;
+            }
+        }
+        .video{
+            background-color: #000;
+            width: 100%;
+            height: 100%;
+            #videoRef{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .learn{
+        width: 360px;
+        background-color: #1B2127;
+        transition: 500ms;
+        position: relative;
+        .teachInfo{
+            width: 100%;
+            height: 116px;
+            padding: 21px;
+            background-color: #292F37;
+            img{
+                width: 130px;
+                height: 73px;
+                margin-right: 21px;
+                border-radius: 4px;
+            }
+            .tit{
+                font-weight: 600;
+                line-height: 40px;
+                height: 40px;
+                overflow: hidden;
+                &::before{
+                    content: '';
+                    display: inline-block;
+                    width: 3px;
+                    height: 13px;
+                    margin-right: 6px;
+                    background: #2080F7;
+                    border-radius: 8px;
+                    border-radius: 1.5px;
+                }
+            }
+            .teacher{
+                line-height: 24px;
+                color: var(--color-font2);
+            }
+        }
+        .cont{
+            padding: 15px;
+            height: calc(100vh - 146px);
+            overflow: hidden;
+            .catalogue{
+                margin-top: 15px;
+                height: calc(100vh - 146px);
+            }
+            .question{
+                margin-top: 15px;
+            }
+            .note{
+                margin-top: 15px;
+            }
+        }
+        .closeRt{
+            position: absolute;
+            left: 0;
+            top: 30px;
+            width: 14px;
+            height: 60px;
+            line-height: 60px;
+            background-color: #000;
+            border-radius: 0 10px 10px 0;
+            color:#A0A9B2;
+            i{
+                position: relative;
+                font-size: 12px;
+            }
+            &:hover{
+                color:#fff;
+            }
+        }
+    }
+    .close{
+        width: 0px;
+        opacity: 0;
+    }
+    .askAndNote{
+        position: fixed;
+        cursor: pointer;
+        right: 0px;
+        top: 50%;
+        width: 44px;
+        height: 140.51px;
+        background: #2E353F;
+        border-radius: 18px 0 0 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #A0A9B2;
+        font-size: 14px;
+        div{
+            margin: 4px 0;
+        }
+        img{
+            width: 24px;
+            height: 24px;
+            margin-bottom: 4px;
+        }
+    }
+}
