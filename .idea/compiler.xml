@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="tj-message-api" />
+        <module name="tj-gateway" />
+        <module name="tj-user" />
+        <module name="tj-auth-resource-sdk" />
+        <module name="tj-course" />
+        <module name="tj-exam" />
+        <module name="tj-pay-domain" />
+        <module name="tj-auth-service" />
+        <module name="tj-search" />
+        <module name="tj-message-service" />
+        <module name="tj-pay-api" />
+        <module name="tj-learning" />
+        <module name="tj-trade" />
+        <module name="tj-common" />
+        <module name="tj-pay-service" />
+        <module name="tj-remark" />
+        <module name="tj-auth-gateway-sdk" />
+        <module name="tj-message-domain" />
+        <module name="tj-promotion" />
+        <module name="tj-media" />
+        <module name="tj-data" />
+        <module name="tj-api" />
+        <module name="tj-auth-common" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="tj-api" options="-parameters" />
+      <module name="tj-auth-common" options="-parameters" />
+      <module name="tj-auth-gateway-sdk" options="-parameters" />
+      <module name="tj-auth-resource-sdk" options="-parameters" />
+      <module name="tj-auth-service" options="-parameters" />
+      <module name="tj-common" options="-parameters" />
+      <module name="tj-course" options="-parameters" />
+      <module name="tj-data" options="-parameters" />
+      <module name="tj-exam" options="-parameters" />
+      <module name="tj-gateway" options="-parameters" />
+      <module name="tj-learning" options="-parameters" />
+      <module name="tj-media" options="-parameters" />
+      <module name="tj-message-api" options="-parameters" />
+      <module name="tj-message-domain" options="-parameters" />
+      <module name="tj-message-service" options="-parameters" />
+      <module name="tj-pay-api" options="-parameters" />
+      <module name="tj-pay-domain" options="-parameters" />
+      <module name="tj-pay-service" options="-parameters" />
+      <module name="tj-promotion" options="-parameters" />
+      <module name="tj-remark" options="-parameters" />
+      <module name="tj-search" options="-parameters" />
+      <module name="tj-trade" options="-parameters" />
+      <module name="tj-user" options="-parameters" />
+    </option>
+  </component>
+</project>
